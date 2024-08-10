@@ -1,4 +1,4 @@
-# My Portfolio
+# AMIR RUDIN CV
 
 Welcome to my portfolio project! This project showcases my skills, experience, and recent work as a software developer.
 
