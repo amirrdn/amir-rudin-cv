@@ -3,6 +3,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import ProjectDetail from './detailproject';
+import projectsData from '../../../../public/project.json';
 
 async function fetchProjects() {
   const res = await fetch('http://localhost:3000/project.json');
@@ -13,9 +14,9 @@ async function fetchProjects() {
 }
 
 export const generateMetadata = async ({ params }: { params: { id: string } }): Promise<Metadata> => {
-  const projectsData = await fetchProjects();
+//   const projectsData = await fetchProjects();
   const project = projectsData.find((p: { id: string }) => p.id === params.id);
-
+    console.log(project)
   if (!project) {
     return {
       title: 'Project Not Found',
@@ -35,9 +36,9 @@ export const generateMetadata = async ({ params }: { params: { id: string } }): 
 };
 
 export default async function ProjectDetailPage({ params }: { params: { id: string } }) {
-  const projectsData = await fetchProjects();
+//   const projectsData = await fetchProjects();
   const project = projectsData.find((p: { id: string }) => p.id === params.id);
-
+console.log(project);
   // Jika proyek tidak ditemukan, arahkan ke halaman 404
   if (!project) {
     notFound();

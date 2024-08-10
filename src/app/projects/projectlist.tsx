@@ -14,7 +14,7 @@ const ProjectsList = ({ projectData }: { projectData: { id: string; images: stri
       <section className="container mx-auto p-4">
         <h1 className="text-4xl font-bold mb-8">Proyek Saya</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {Array.isArray(projectData) && projectData.map((project: { id: string; images: string[]; title: string; description: string }) => ( // Tambahkan pemeriksaan ini
+          {projectData && projectData.map((project: { id: string; images: string[]; title: string; description: string }) => ( // Ganti projectsData dengan projectData
             <div key={project.id} className="bg-white rounded-lg shadow-md overflow-hidden">
               {project.images.length > 0 && <Image src={project.images[0]} alt={project.title} className="w-full h-48 object-cover" width={500} height={300} />} {/* Ganti <img> dengan <Image> dan tambah pemeriksaan untuk images */}
               <div className="p-4">
