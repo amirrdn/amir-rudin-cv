@@ -54,6 +54,7 @@ const Header: FC = () => {
         <nav className="hidden md:flex space-x-6">
           <Link href="/articles" className={`hover:text-teal-500 ${pathname === '/articles' ? 'text-teal-500' : ''}`}>Articles</Link>
           <Link href="/projects" className={`hover:text-teal-500 ${pathname === '/projects' ? 'text-teal-500' : ''}`}>Projects</Link>
+          <Link href="/cv" className={`hover:text-teal-500 ${pathname === '/cv' ? 'text-teal-500' : ''}`}>CV</Link>
         </nav>
         <div className="flex items-center space-x-4">
           <button
