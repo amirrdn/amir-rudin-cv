@@ -7,17 +7,11 @@ import Image from 'next/image'; // Mengimpor Image dari next/image
 import { useTheme } from '../context/ThemeContext';
 
 const Header: FC = () => {
-  // const context = useContext(ThemeContext); // Mengambil context
-  // const isLightTheme = context?.isLightTheme ?? false; // Menggunakan optional chaining
   const { isLightTheme, setIsLightTheme, locale, setLocales } = useTheme();
-  // const setIsLightTheme = context?.setIsLightTheme; // Ambil fungsi dari context
   const pathname = usePathname();
-  const [isSticky, setIsSticky] = useState(false); // Tambahkan state untuk sticky header
-  // const locale = context?.locale ?? 'en';
-  // const setLocal = context?.setLocal;
-  // const [language, setLanguage] = useState('en'); // Tambahkan state untuk bahasa
-  const [dropdownOpen, setDropdownOpen] = useState(false); // Tambahkan state untuk dropdown
-  const dropdownRef = useRef<HTMLDivElement | null>(null); // Tambahkan tipe HTMLDivElement
+  const [isSticky, setIsSticky] = useState(false); // State untuk sticky header
+  const [dropdownOpen, setDropdownOpen] = useState(false); // State untuk dropdown
+  const dropdownRef = useRef<HTMLDivElement | null>(null); // Tipe HTMLDivElement
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,45 +25,35 @@ const Header: FC = () => {
   }, []);
 
   const toggleTheme = () => {
-    if (setIsLightTheme) {
-      setIsLightTheme((prev: boolean) => !prev); // Memperbarui context dengan tipe boolean
-    } else {
-      console.error("setIsLightTheme tidak tersedia dalam context.");
-    }
+    setIsLightTheme((prev: boolean) => !prev); // Memperbarui context dengan tipe boolean
   };
 
   const handleLanguageChange = (lang: string) => {
-    if (setLocales) { // Tambahkan pemeriksaan untuk memastikan setLocal tidak undefined
-      setLocales(lang); 
-    } else {
-      console.error("setLocal tidak tersedia dalam context."); // Tambahkan log error jika setLocal tidak ada
-    }
+    setLocales(lang); 
   };
-  const handleClickOutside = (event: MouseEvent) => { // Tambahkan tipe MouseEvent
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) { // Tambahkan casting ke Node
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
       setDropdownOpen(false);
     }
   };
 
-useEffect(() => {
+  useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
 
     // Cleanup the event listener on component unmount
     return () => {
         document.removeEventListener('mousedown', handleClickOutside);
     };
-}, []);
+  }, []);
 
   return (
     <header className={`shadow-md ${isLightTheme ? 'bg-gray-300 text-gray-900' : 'bg-gray-900 text-white'} ${isSticky ? 'fixed top-0 left-0 w-full z-10' : ''}`}>
       <div className="container mx-auto flex justify-between items-center p-4">
       <Link href="/"><h1 className="text-3xl font-bold">AMIR RUDIN</h1></Link>
         <nav className="hidden md:flex space-x-6">
-          <Link href="/about" className={`hover:text-teal-500 ${pathname === '/about' ? 'text-teal-500' : ''}`}>About</Link>
           <Link href="/articles" className={`hover:text-teal-500 ${pathname === '/articles' ? 'text-teal-500' : ''}`}>Articles</Link>
           <Link href="/projects" className={`hover:text-teal-500 ${pathname === '/projects' ? 'text-teal-500' : ''}`}>Projects</Link>
-          <Link href="/speaking" className={`hover:text-teal-500 ${pathname === '/speaking' ? 'text-teal-500' : ''}`}>Speaking</Link>
-          <Link href="/uses" className={`hover:text-teal-500 ${pathname === '/uses' ? 'text-teal-500' : ''}`}>Uses</Link>
         </nav>
         <div className="flex items-center space-x-4">
           <button

@@ -1,7 +1,7 @@
 [
     {
       "id": "1",
-      "title": "Proyek 1",
+      "title": "CRM",
       "description": "Sistem CRM berbasis web adalah solusi perangkat lunak yang dirancang untuk membantu organisasi dalam mengelola hubungan dengan pelanggan secara efektif dan efisien. Sistem ini menyediakan platform terpadu yang memungkinkan pengguna untuk mengakses dan mengelola informasi pelanggan, interaksi, dan proses bisnis dari mana saja dan kapan saja, selama terhubung ke internet.",
       "link": "https://link-ke-proyek1.com",
       "images": [
@@ -9,8 +9,20 @@
         "https://images.cakeresume.com/post-images/28907077-8ef9-4ab4-a652-5e01fac5f64d.png",
         "https://images.cakeresume.com/post-images/9a5acd6f-f9c7-4c87-802f-a57b072c095e.png"
       ],
-      "technologies": ["React", "Tailwind CSS", "Node.js"],
-      "repo": "https://github.com/user/proyek1"
+      "technologies": ["Vuejs", "Bootstrap", "Laravel", "Firebase", "Microservice", "JWT Token"],
+      "repo": "https://github.com/amirrdn",
+      "locales": [
+        {
+          "id": "id",
+          "title": "CRM",
+          "text": "Sistem CRM berbasis web adalah solusi perangkat lunak yang dirancang untuk membantu organisasi dalam mengelola hubungan dengan pelanggan secara efektif dan efisien. Sistem ini menyediakan platform terpadu yang memungkinkan pengguna untuk mengakses dan mengelola informasi pelanggan, interaksi, dan proses bisnis dari mana saja dan kapan saja, selama terhubung ke internet"
+        },
+        {
+          "id": "en",
+          "title": "CRM",
+          "text": "A web-based CRM system is a software solution designed to help organizations manage customer relationships effectively and efficiently. This system provides an integrated platform that allows users to access and manage customer information, interactions and business processes from anywhere and at any time, as long as they are connected to the internet"
+        }
+      ]
     },
     {
       "id": "2",
@@ -22,8 +34,20 @@
         "https://images.cakeresume.com/post-images/6d310b98-7c2f-4f99-a590-2926c0a3958c.png",
         "https://images.cakeresume.com/post-images/b6eb8b34-400c-470c-8ca5-ccaca0805885.png"
       ],
-      "technologies": ["Vue.js", "Tailwind CSS", "Express"],
-      "repo": "https://github.com/user/proyek2"
+      "technologies": ["Reactjs", "Tailwind CSS", "Express", "Typescript", "Whatssapp Apit"],
+      "repo": "https://github.com/amirrdn",
+      "locales": [
+        {
+          "id": "id",
+          "title": "Proyek Pengadaan Barang",
+          "text": "Sistem pengadaan barang adalah sebuah platform terintegrasi yang dirancang untuk memfasilitasi dan mengelola proses pengadaan barang secara efisien dan transparan. Sistem ini bertujuan untuk meningkatkan efisiensi operasional dalam pengadaan barang, mengurangi biaya, dan mempercepat waktu pengadaan, sehingga organisasi dapat memenuhi kebutuhan material dan layanan dengan lebih baik."
+        },
+        {
+          "id": "en",
+          "title": "Procurement",
+          "text": "The goods procurement system is an integrated platform designed to facilitate and manage the goods procurement process efficiently and transparently. This system aims to increase operational efficiency in procurement of goods, reduce costs, and speed up procurement time, so that organizations can better meet material and service needs."
+        }
+      ]
     },
     {
       "id": "3",
@@ -38,8 +62,20 @@
         "https://images.cakeresume.com/post-images/1113caf7-ca32-44f1-b97e-0a66d48009d4.png",
         "https://images.cakeresume.com/post-images/edead885-f307-471c-b9e8-b40fbec65f5f.png"
       ],
-      "technologies": ["Angular", "Bootstrap", "Node.js"],
-      "repo": "https://github.com/user/proyek3"
+      "technologies": ["Javascript", "Bootstrap", "Flutter"],
+      "repo": "https://github.com/amirrdn",
+      "locales": [
+        {
+          "id": "id",
+          "title": "Gudang",
+          "text": "Aplikasi ini memiliki sistem Easy POS untuk sistem penagihan yang lebih cepat. Templat web yang sangat responsif telah digunakan, aplikasi berisi kode sumber lengkap dan mudah untuk dimodifikasi sesuai kebutuhan Anda. Aplikasi dapat siap diinstal di komputer lokal atau di server online dengan proses instalasi yang mudah."
+        },
+        {
+          "id": "en",
+          "title": "Warehouse Web Based",
+          "text": "The application has an Easy POS system for a faster billing system. A very responsive web template has been used, the application contains complete source code and is easy to modify it as per your needs. The application can be ready to install on the local computer or on an online server with an easy installation process."
+        }
+      ]
     }
   ]
   

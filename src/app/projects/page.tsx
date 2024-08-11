@@ -1,6 +1,5 @@
 // src/app/projects/page.tsx
 
-import Link from 'next/link';
 import { Metadata } from 'next';
 import ProjectsList from './projectlist';
 import projectsData from '../../../public/project.json';
