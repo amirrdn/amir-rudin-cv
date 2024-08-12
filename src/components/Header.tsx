@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image'; // Mengimpor Image dari next/image
 import { useTheme } from '../context/ThemeContext';
+import { useRouter } from 'next/navigation';
 
 const Header: FC = () => {
   const { isLightTheme, setIsLightTheme, locale, setLocales } = useTheme();
@@ -12,6 +13,9 @@ const Header: FC = () => {
   const [isSticky, setIsSticky] = useState(false); // State untuk sticky header
   const [dropdownOpen, setDropdownOpen] = useState(false); // State untuk dropdown
   const dropdownRef = useRef<HTMLDivElement | null>(null); // Tipe HTMLDivElement
+
+  const router = useRouter();
+  const [lang, setLang] = useState<'en' | 'id'>('en');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +35,14 @@ const Header: FC = () => {
   const handleLanguageChange = (lang: string) => {
     setLocales(lang); 
   };
+  const changeRoute = (lang: 'en' | 'id') => {
+    setLang(lang);
+    // Redirect to the current page with the new language
+    const isroute = pathname.split('/')[1];
+    if(isroute === 'cv'){
+      router.push(`/${pathname.split('/')[1]}/${lang}`);
+    }
+  }
 
   const handleClickOutside = (event: MouseEvent) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -54,7 +66,7 @@ const Header: FC = () => {
         <nav className="hidden md:flex space-x-6">
           <Link href="/articles" className={`hover:text-teal-500 ${pathname === '/articles' ? 'text-teal-500' : ''}`}>Articles</Link>
           <Link href="/projects" className={`hover:text-teal-500 ${pathname === '/projects' ? 'text-teal-500' : ''}`}>Projects</Link>
-          <Link href="/cv" className={`hover:text-teal-500 ${pathname === '/cv' ? 'text-teal-500' : ''}`}>CV</Link>
+          <Link href="/cv/id" className={`hover:text-teal-500 ${pathname === '/cv/id' || pathname === '/cv/en' ? 'text-teal-500' : ''}`}>CV</Link>
         </nav>
         <div className="flex items-center space-x-4">
           <button
@@ -81,8 +93,8 @@ const Header: FC = () => {
             </button>
             {dropdownOpen && (
               <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md">
-                <button onClick={() => handleLanguageChange('en')} className="block px-4 py-2 text-gray-800 hover:bg-gray-200 w-full text-left">English</button>
-                <button onClick={() => handleLanguageChange('id')} className="block px-4 py-2 text-gray-800 hover:bg-gray-200 w-full text-left">Bahasa</button>
+                <button onClick={() => {handleLanguageChange('en'), changeRoute('en')}} className="block px-4 py-2 text-gray-800 hover:bg-gray-200 w-full text-left">English</button>
+                <button onClick={() => {handleLanguageChange('id'), changeRoute('id')}} className="block px-4 py-2 text-gray-800 hover:bg-gray-200 w-full text-left">Bahasa</button>
               </div>
             )}
           </div>

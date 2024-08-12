@@ -1,11 +1,5 @@
-const Rightcolumn = () => {
-    const convertDate = (date: Date) => {
-        return date.toLocaleDateString('id-ID', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
-    }
+
+const Rightcolumn = ({ dictionary }: { dictionary: { intro: string; exprience?: { title: string; company: string; date_work: []; jobdesc: string; address_work: string }[] } }) => {
     return(<>
         <div className="flex-shrink-0 w-full h-px bg-current" />
         <div className="mt-2 mb-2">
@@ -43,7 +37,7 @@ const Rightcolumn = () => {
                 </div>
             </div>
         </div>
-        <div className="mb-5 mt-5">
+        <div className="mb-5 mt-10">
             <div className="flex-shrink-0 w-full h-px bg-current" />
             <div className="mt-2 mb-2">
             <svg
@@ -69,36 +63,29 @@ const Rightcolumn = () => {
             <div className="mb-2 mt-2">
             <div className="flex flex-col">
                 <div className="relative">
-                    <div className="absolute top-5 w-1 h-full bg-current left-1 transform -translate-x-1/1"></div>
-                    <div className="flex flex-col space-y-5 ">
-                        <div className="items-center">
-                            <div className="w-3 h-3 relative top-2 rounded-full bg-current"></div>
-                            <div className="ml-10">
-                                <p className="text-xl font-bold mb-2">Web Developer</p>
-                                <p className="text-lg font-bold mb-2">PT Trasmediacom</p>
-                                <p className="text-sm mb-2">Cakung, Jakarta Timur</p>
-                                <p className="text-sm mb-2"> {convertDate(new Date('2015-01-01'))} - {convertDate(new Date('2018-01-11'))}</p>
-                                <p>
-                                    Make a website portal busines, web based marketing.
-                                </p>
+                    {
+                        dictionary.exprience && dictionary.exprience.map((b, index) => (
+                            <div key={index}>
+                            <div className="absolute top-5 w-1 h-full bg-current left-1 transform -translate-x-1/1"></div>
+                            <div className="flex flex-col space-y-5 mb-5">
+                                <div className="items-center">
+                                    <div className="w-3 h-3 relative top-5 rounded-full bg-current"></div>
+                                    <div className="ml-10">
+                                        <p className="text-2xl font-bold mb-2">{b.title}</p>
+                                        <p className="text-base font-bold mb-2">{b.company}</p>
+                                        <p className="text-sm mb-2">{b.address_work}</p>
+                                        <p className="text-sm mb-2"> {b.date_work.join(' - ')}</p>
+                                        <p>
+                                            {b.jobdesc}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="absolute top-5 w-1 h-full bg-current left-1 transform -translate-x-1/1"></div>
-                    <div className="flex flex-col space-y-5 ">
-                        <div className="items-center">
-                            <div className="w-3 h-3 relative top-2 rounded-full bg-current"></div>
-                            <div className="ml-10">
-                                <p className="text-xl font-bold mb-2">IT Developer</p>
-                                <p className="text-lg font-bold mb-2">PT Smartfren Tbk</p>
-                                <p className="text-sm mb-2">BSD, Tangerang Banten</p>
-                                <p className="text-sm mb-2">2011 - 2014</p>
-                                <p>
-                                    Make web based HRIS, procurement
-                                </p>
+                            <div className="absolute top-5 w-1 h-full bg-current left-1 transform -translate-x-1/1"></div>
                             </div>
-                        </div>
-                    </div>
+                        ))
+                    }
+
                 </div>
             </div>
         </div>

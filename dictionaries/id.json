@@ -1,0 +1,46 @@
+{
+    "intro": "Saya seorang Pengembang Web berpengalaman dengan pengalaman lebih dari 9 tahun dalam merancang, mengembangkan dan memelihara situs web dan aplikasi web. Keahlian saya mencakup pengembangan front-end dan back-end, dengan fokus kuat pada penciptaan solusi web yang responsif, ramah pengguna, dan efisien. Saya memiliki pemahaman mendalam tentang berbagai bahasa pemrograman, kerangka kerja, dan alat yang penting untuk pengembangan web modern.",
+    "address": "Kabupaten Bekasi, Jawa Barat",
+    "exprience":[
+        {
+            "title": "Web Developer",
+            "company": "PT Trasmediacom",
+            "address_work": "Cakung, Jakarta Timur",
+            "jobdesc": "Membuat website portal bisnis, web based marketing.",
+            "date_work": [
+                "01 Januari 2015",
+                "11 Januari 2018"
+            ]
+        },
+        {
+            "title": "IT Developer",
+            "company": "PT Smartfren Tbk",
+            "address_work": "BSD, Tangerang Banten",
+            "jobdesc": "Membuat HRIS berbasis web, pengadaan",
+            "date_work": [
+                "16 Januari 2018",
+                "24 November 2020"
+            ]
+        },
+        {
+            "title": "Fullstack Developer",
+            "company": "Folie A Trois Solution (Remote)",
+            "address_work": "Kuala Lumpur, Malaysia",
+            "jobdesc": "Membuat Gudang berbasis web & android",
+            "date_work": [
+                "01 Juli 2023",
+                "01 Februari 2024"
+            ]
+        },
+        {
+            "title": "Web Developer",
+            "company": "PT Alat Bantu Dengar Indonesia",
+            "address_work": "Salemba, Jakarta Pusat",
+            "jobdesc": "Membuat Pengadaan & CRM berbasis web",
+            "date_work": [
+                "02 Desember 2020",
+                "24 Juli 2024"
+            ]
+        }
+    ]
+}

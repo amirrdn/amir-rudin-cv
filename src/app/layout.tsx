@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import "./globals.css";
-
+import { i18n, type Locale } from "../../i18n-config";
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -14,12 +14,16 @@ export const metadata: Metadata = {
   description: 'Welcome to my portfolio website',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
+
+export default function RootLayout({ children, params }: { children: React.ReactNode, params: { lang: Locale }; }) {
   return (
     // <html lang="en">
     //   <body className={inter.className}>{children}</body>
     // </html>
-    <html lang="id">
+    <html lang={params.lang}>
     <body className={inter.className}>
         <ThemeProvider>
           <Header />

@@ -1,0 +1,46 @@
+{
+    "intro": "I am an experienced Web Developer with over 9 years of experience in designing, developing and maintaining websites and web applications. My expertise includes both front-end and back-end development, with a strong focus on creating responsive, user-friendly and efficient web solutions. I have a deep understanding of various programming languages, frameworks, and tools essential for modern web development.",
+    "address": "Bekasi Regency, West Java",
+    "exprience": [
+        {
+            "title": "Web Developer",
+            "company": "PT Trasmediacom",
+            "address_work": "Cakung, East Jakarta",
+            "jobdesc": "Make a website portal busines, web based marketing.",
+            "date_work": [
+                "01 January 2015",
+                "11 January 2018"
+            ]
+        },
+        {
+            "title": "IT Developer",
+            "company": "PT Smartfren Tbk",
+            "address_work": "BSD, Tangerang Banten",
+            "jobdesc": "Creating web-based HRIS, procurement",
+            "date_work": [
+                "16 January 2018",
+                "24 November 2020"
+            ]
+        },
+        {
+            "title": "Fullstack Developer",
+            "company": "Folie A Trois Solution (Remote)",
+            "address_work": "Kuala Lumpur, Malaysia",
+            "jobdesc": "Create a web & Android based warehouse",
+            "date_work": [
+                "01 July 2023",
+                "01 February 2024"
+            ]
+        },
+        {
+            "title": "Web Developer",
+            "company": "PT Alat Bantu Dengar Indonesia",
+            "address_work": "Salemba, Jakarta Pusat",
+            "jobdesc": "Make web based Procurement & CRM",
+            "date_work": [
+                "02 December 2020",
+                "24 July 2024"
+            ]
+        }
+    ]
+}

@@ -1,10 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 
-const HeaderCv = () => {
+const LeftRight = ({ dictionary }: { dictionary: { intro: string } }) => {
   return (
     <>
-      <div className="text-center p-6">
+      <div className="text-center mb-6">
         <div className="font-['circular'] text-6xl font-bold leading-normal mb-2">
          Amir Rudin
         </div>
@@ -20,13 +19,11 @@ const HeaderCv = () => {
             />
           </div>
         </div>
-        <div className="text-justify font-['Roboto'] leading-relaxed">
-          Web Developer with 8 years of experience in designing and developing user interfaces,
-          testing, debugging, and training staff within eCommerce technologies. Proven ability in
-          optimizing web functionality that improve data retrieval and workflow efficiencies.
+        <div className="text-justify leading-relaxed">
+          {dictionary['intro']}
         </div>
       </div>
-      <div className="flex-shrink-0 w-full h-px bg-[#414042]" />
+      <div className="flex-shrink-0 w-full h-px bg-current" />
       <div className="mt-2 mb-2">
         <svg
           className="w-5 h-5 float-left me-5"
@@ -51,11 +48,11 @@ const HeaderCv = () => {
         </svg>
         <span className="font-lg">Contact</span>
       </div>
-      <div className="flex-shrink-0 w-full h-px bg-[#414042] mt-2" />
+      <div className="flex-shrink-0 w-full h-px bg-current mt-2" />
       <div className="mt-2 mb-2">
         <svg
           className="w-5 h-5 float-left me-5"
-          fill="#FFFF"
+          fill="currentColor"
           version="1.1"
           id="Capa_1"
           xmlns="http://www.w3.org/2000/svg"
@@ -77,10 +74,10 @@ const HeaderCv = () => {
             </g>
           </g>
         </svg>
-        <span className="border-l h-5 me-5"></span>
-        <span className="float-end">Bekasi Regency, West Java</span>
+        <span className="border-l border-current h-5 me-5"></span>
+        <div className="float-end">Bekasi Regency, West Java</div>
       </div>
-      <div className="flex-shrink-0 w-full h-px bg-[#414042] mt-2" />
+      <div className="flex-shrink-0 w-full h-px bg-current mt-2" />
       <div className="mt-2 mb-2 w-full">
         <svg 
             className="w-5 h-5 float-left me-5"
@@ -91,19 +88,19 @@ const HeaderCv = () => {
         >
             <path 
                 d="M6.014 8.00613C6.12827 7.1024 7.30277 5.87414 8.23488 6.01043L8.23339 6.00894C9.14051 6.18132 9.85859 7.74261 10.2635 8.44465C10.5504 8.95402 10.3641 9.4701 10.0965 9.68787C9.7355 9.97883 9.17099 10.3803 9.28943 10.7834C9.5 11.5 12 14 13.2296 14.7107C13.695 14.9797 14.0325 14.2702 14.3207 13.9067C14.5301 13.6271 15.0466 13.46 15.5548 13.736C16.3138 14.178 17.0288 14.6917 17.69 15.27C18.0202 15.546 18.0977 15.9539 17.8689 16.385C17.4659 17.1443 16.3003 18.1456 15.4542 17.9421C13.9764 17.5868 8 15.27 6.08033 8.55801C5.97237 8.24048 5.99955 8.12044 6.014 8.00613Z" 
-                fill="#0F0F0F"
+                fill="currentColor"
             ></path>
             <path 
-                fill-rule="evenodd" 
-                clip-rule="evenodd" 
+                fillRule="evenodd" 
+                clipRule="evenodd" 
                 d="M12 23C10.7764 23 10.0994 22.8687 9 22.5L6.89443 23.5528C5.56462 24.2177 4 23.2507 4 21.7639V19.5C1.84655 17.492 1 15.1767 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23ZM6 18.6303L5.36395 18.0372C3.69087 16.4772 3 14.7331 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C11.0143 21 10.552 20.911 9.63595 20.6038L8.84847 20.3397L6 21.7639V18.6303Z" 
-                fill="#0F0F0F"
+                fill="currentColor"
             ></path>
         </svg>
-        <span className="border-l border-gray-400 h-5 me-5"></span>
+        <span className="border-l border-current h-5 me-5"></span>
         <span className="float-end">085717615833</span>
       </div>
-      <div className="flex-shrink-0 w-full h-px bg-[#414042] mt-2" />
+      <div className="flex-shrink-0 w-full h-px bg-current mt-2" />
       <div className="mt-2 mb-2">
         <svg 
             className="w-5 h-5 float-left me-5"
@@ -111,7 +108,7 @@ const HeaderCv = () => {
             xmlns="http://www.w3.org/2000/svg" 
             fill="none" 
             stroke="currentColor"
-            stroke-linecap="round" strokeLinejoin="round" strokeWidth="3.456"
+            strokeLinecap="round" strokeLinejoin="round" strokeWidth="3.456"
         >
             <polygon 
                 points="56 20 32 12 8 20 8 52 56 52 56 20"
@@ -120,13 +117,13 @@ const HeaderCv = () => {
                 points="48 28 32 36 16 28"
             ></polyline>
         </svg>
-        <span className="border-l h-5 me-5"></span>
+        <span className="border-l border-current h-5 me-5"></span>
         <span className="float-end">4mir.rdn@gmail.com</span>
       </div>
-      <div className="flex-shrink-0 w-full h-px bg-[#414042]" />
+      <div className="flex-shrink-0 w-full h-px bg-current" />
 
       <div className="mb-4 mt-14">
-        <div className="flex-shrink-0 w-full h-px bg-[#414042]" />
+        <div className="flex-shrink-0 w-full h-px bg-current" />
           <div className="w-full mt-2 mb-2">
             <svg
               fill="currentColor"
@@ -184,7 +181,7 @@ const HeaderCv = () => {
             </svg>
             <span className="text-lg">SKILLS</span>
           </div>
-          <div className="flex-shrink-0 w-full h-px bg-[#414042]" />
+          <div className="flex-shrink-0 w-full h-px bg-current" />
           <div className="mt-2 grid grid-cols-2 gap-6">
             <div>Javascript</div>
             <div><span className="float-end">TypeScript</span></div>
@@ -196,10 +193,16 @@ const HeaderCv = () => {
             <div><span className="float-end">Flutter</span></div>
             <div>Nextjs</div>
             <div><span className="float-end">Nodejs</span></div>
+            <div>RESTful APIs</div>
+            <div><span className="float-end">GraphQL</span></div>
+            <div>Git</div>
+            <div><span className="float-end">Github</span></div>
+            <div>Bitbucket</div>
+            <div><span className="float-end">Gitlab</span></div>
           </div>
       </div>
     </>
   );
 };
 
-export default HeaderCv;
+export default LeftRight;
