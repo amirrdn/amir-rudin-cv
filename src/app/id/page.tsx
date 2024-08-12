@@ -1,10 +1,10 @@
 // src/app/page.tsx
 
 import { Metadata } from 'next';
-import CardList from './card';
+import CardList from '../card';
 
 // Impor data JSON
-import projectsData from '../../public/project.json';
+import projectsData from '../../../public/project.json';
 
 export const metadata: Metadata = {
   title: 'Amir Rudin - Portfolio',

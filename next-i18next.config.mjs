@@ -4,5 +4,4 @@ export const i18n = {
     defaultLocale: 'en',
     locales: ['en', 'id'], // Pastikan ini adalah array dan berisi bahasa yang Anda dukung
   },
-  localePath: './public/locales',
 };
