@@ -13,6 +13,15 @@ import { GoogleTagManager } from '@next/third-parties/google'
 export const metadata: Metadata = {
   title: 'Amir Rudin - Portfolio',
   description: 'Welcome to my portfolio website',
+  robots: "index, follow",
+  icons:{
+    icon: '/favicon.jpg'
+  },
+  openGraph: {
+    title: 'Amir Rudin - Portfolio',
+    description: 'Welcome to my portfolio website',
+    images: ['/amir-rdn.jpg'], // Path to the default image
+  },
 };
 
 export async function generateStaticParams() {
@@ -24,6 +33,7 @@ export default function RootLayout({ children, params }: { children: React.React
     <html lang={params.lang ?? 'id'}>
        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GA_ID as string} />
     <body className={inter.className}>
+    <link rel="icon" href="/favicon.jpg" sizes="any" />
         <ThemeProvider>
           <Header />
           <div className="container mx-auto p-4">{children}</div>
