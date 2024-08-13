@@ -53,6 +53,24 @@ const ProjectDetail: React.FC<CardListProps> = ({ projectData }) => {
                 slidesPerView={4}
                 spaceBetween={10}
                 className="mySwiper mb-4"
+                breakpoints={{
+                    // When window width is >= 320px
+                    320: {
+                      slidesPerView: 1, // Show 1 slide per view on small screens
+                    },
+                    // When window width is >= 640px
+                    640: {
+                      slidesPerView: 2, // Show 2 slides per view on medium screens
+                    },
+                    // When window width is >= 768px
+                    768: {
+                      slidesPerView: 3, // Show 3 slides per view on larger screens
+                    },
+                    // When window width is >= 1024px
+                    1024: {
+                      slidesPerView: 4, // Show 4 slides per view on extra-large screens
+                    },
+                  }}
             >
                 {project.images.map((image, index) => (
                     <SwiperSlide key={index}>
