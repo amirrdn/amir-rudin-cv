@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 
 export default function RootLayout({ children, params }: { children: React.ReactNode, params: { lang: Locale }; }) {
   return (
-    <html lang={params.lang}>
+    <html lang={params.lang ?? 'id'}>
     <body className={inter.className}>
         <ThemeProvider>
           <Header />
