@@ -16,7 +16,15 @@ const Header: FC = () => {
 
   const router = useRouter();
   const [lang, setLang] = useState<'en' | 'id'>('en');
-
+  
+  const isroute = pathname.split('/')[1];
+  useEffect(()  => {
+    if(isroute === 'cv'){
+      setLang(pathname.split('/')[2] as 'en' | 'id');
+      setLocales(pathname.split('/')[2] as 'en' | 'id')
+      // router.push(`/${pathname.split('/')[1]}/${lang}`);
+    }
+   }, [isroute, pathname, setLocales])
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 0); // Perbarui state berdasarkan posisi scroll
@@ -88,7 +96,7 @@ const Header: FC = () => {
           </button>
           <div className="relative" ref={dropdownRef}>
             <button className="flex items-center space-x-2" onClick={() => setDropdownOpen(prev => !prev)} >
-              <Image src={locale === 'en' ? '/img/english.svg' : '/img/indonesia.svg'} alt="Flag" width={20} height={20} />
+              <Image src={locale === 'en' || lang === 'en' ? '/img/english.svg' : '/img/indonesia.svg'} alt="Flag" width={20} height={20} />
               <span>{locale === 'en' ? 'English' : 'Bahasa'}</span>
             </button>
             {dropdownOpen && (

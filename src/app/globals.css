@@ -31,3 +31,45 @@ body {
     text-wrap: balance;
   }
 }
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.react-calendar {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.react-calendar__tile {
+  max-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-calendar__tile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.react-calendar__tile li {
+  background: #61dafb !important;
+  color: #000;
+  padding: 5px;
+  margin: 2px;
+  border-radius: 5px;
+  font-size: 0.8em;
+}
+.react-calendar__navigation{
+  @apply bg-blue-500;
+}
+.react-calendar__month-view__weekdays{
+  @apply text-gray-900;
+}
+.react-calendar__month-view__days{
+  @apply text-gray-600;
+}

@@ -1,4 +1,5 @@
 
+import Calendars from "../Calendar";
 const Rightcolumn = ({ dictionary }: { dictionary: { intro: string; exprience?: { title: string; company: string; date_work: []; jobdesc: string; address_work: string }[] } }) => {
     return(<>
         <div className="flex-shrink-0 w-full h-px bg-current" />
@@ -89,6 +90,9 @@ const Rightcolumn = ({ dictionary }: { dictionary: { intro: string; exprience?: 
                 </div>
             </div>
         </div>
+        </div>
+        <div className="mb-5 mt-10 flex justify-center items-center">
+        <Calendars />
         </div>
     </>)
 }

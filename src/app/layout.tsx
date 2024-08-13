@@ -6,9 +6,11 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import "./globals.css";
+import 'react-calendar/dist/Calendar.css';
 import { i18n, type Locale } from "../../i18n-config";
 const inter = Inter({ subsets: ['latin'] });
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google';
+import Menu from '@/components/Menu';
 
 export const metadata: Metadata = {
   title: 'Amir Rudin - Portfolio',
@@ -48,6 +50,7 @@ export default function RootLayout({ children, params }: { children: React.React
     <link rel="icon" href="/favicon.jpg" sizes="any" />
         <ThemeProvider>
           <Header />
+          <Menu />
           <div className="container mx-auto p-4">{children}</div>
           <Footer />
         </ThemeProvider>

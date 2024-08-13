@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import SkillsProgress from "@/components/SkillsProgress";
+import Calendars from "@/components/Calendar";
 
 interface CardListProps {
   projectsData: {
@@ -117,15 +118,18 @@ const CardList: React.FC<CardListProps> = ({ projectsData }) => {
             </div>
           </div>
         </header>
-        <header className="py-20">
-          <div className="container mx-auto text-center">
+        <header className="py-20 lg:flex">
+          <div className="w-1/2 flex flex-col justify-center items-center">
             <h1 className="text-4xl font-bold mb-4">{text?.welcome?.title ?? 'Default Title'}</h1>
             <p className="text-lg mb-8">{text?.welcome?.description ?? 'Default description'}</p>
             <Link href="/projects" className="bg-teal-500 text-white px-4 py-2 rounded-lg hover:bg-teal-600 transition">
               {text?.welcome?.viewProjects ?? 'Lihat Proyek'}
             </Link>
           </div>
-        </header>
+          <div className="lg:w-1/2 flex justify-center items-center">
+            <Calendars />
+          </div>
+      </header>
         <section className="py-10">
           <h2 className="text-3xl font-bold text-center mb-6">{text?.skills?.title}</h2>
           <div className="flex flex-wrap justify-center gap-6">
