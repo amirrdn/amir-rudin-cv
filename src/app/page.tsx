@@ -2,6 +2,7 @@
 
 import { Metadata } from 'next';
 import CardList from './card';
+import { GoogleTagManager } from '@next/third-parties/google'
 
 // Impor data JSON
 import projectsData from '../../public/project.json';
@@ -17,6 +18,7 @@ export default function HomePage() {
   return (
     
     <>
+      <GoogleTagManager gtmId="4Q8naWiq7CRZWmIFSs1GdjBVsicbmST7arauUJYtmY0" />
       <CardList projectsData={projectsData}/>
     </>
   );
