@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import "./globals.css";
 import { i18n, type Locale } from "../../i18n-config";
 const inter = Inter({ subsets: ['latin'] });
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: 'Amir Rudin - Portfolio',
@@ -24,6 +25,7 @@ export async function generateStaticParams() {
 export default function RootLayout({ children, params }: { children: React.ReactNode, params: { lang: Locale }; }) {
   return (
     <html lang={params.lang ?? 'id'}>
+       <GoogleTagManager gtmId="4Q8naWiq7CRZWmIFSs1GdjBVsicbmST7arauUJYtmY0" />
     <body className={inter.className}>
         <ThemeProvider>
           <Header />
