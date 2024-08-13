@@ -22,7 +22,7 @@ export async function generateStaticParams() {
 export default function RootLayout({ children, params }: { children: React.ReactNode, params: { lang: Locale }; }) {
   return (
     <html lang={params.lang ?? 'id'}>
-       <GoogleTagManager gtmId="4Q8naWiq7CRZWmIFSs1GdjBVsicbmST7arauUJYtmY0" />
+       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GA_ID as string} />
     <body className={inter.className}>
         <ThemeProvider>
           <Header />
