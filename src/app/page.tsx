@@ -10,6 +10,7 @@ import projectsData from '../../public/project.json';
 export const metadata: Metadata = {
   title: 'Amir Rudin - Portfolio',
   description: 'Welcome to my portfolio website where you can explore my projects.',
+  robots:"noindex,nofollow"
 };
 
 export default function HomePage() {
