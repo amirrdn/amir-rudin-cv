@@ -78,7 +78,7 @@ const CardList: React.FC<CardListProps> = ({ projectsData }) => {
                         height={isSticky ? 50 : 512}
                         decoding="async"
                         data-nimg="1"
-                        className={`rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 ${isSticky ? 'lg:h-12 lg:w-12 max-sm:w-10 max-sm:relative max-sm:left-[20px]' : 'h-16 w-16'}`}
+                        className={`rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 ${isSticky ? 'lg:h-12 lg:w-12 max-sm:w-10 max-sm:relative max-sm:left-[18px]' : 'h-16 w-16'}`}
                         src="https://media.cakeresume.com/image/upload/s--DkSf_6Rf--/c_fill,g_face,h_120,w_120/v1711289970/fj6u5wav3fmxlvej7drq.jpg"
                       />
                     </a>
