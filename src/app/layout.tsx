@@ -13,9 +13,6 @@ import { GoogleTagManager } from '@next/third-parties/google'
 export const metadata: Metadata = {
   title: 'Amir Rudin - Portfolio',
   description: 'Welcome to my portfolio website',
-  verification: {
-    google: "4Q8naWiq7CRZWmIFSs1GdjBVsicbmST7arauUJYtmY0",
-  },
 };
 
 export async function generateStaticParams() {
