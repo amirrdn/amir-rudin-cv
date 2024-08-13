@@ -12,6 +12,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Amir Rudin - Portfolio',
   description: 'Welcome to my portfolio website',
+  verification: {
+    google: "google-site-verification=4Q8naWiq7CRZWmIFSs1GdjBVsicbmST7arauUJYtmY0",
+  },
 };
 
 export async function generateStaticParams() {
