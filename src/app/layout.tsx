@@ -13,7 +13,7 @@ import { GoogleTagManager } from '@next/third-parties/google'
 export const metadata: Metadata = {
   title: 'Amir Rudin - Portfolio',
   description: 'Welcome to my portfolio website',
-  robots: "index, follow",
+  robots: "index,follow",
   icons:{
     icon: '/favicon.jpg'
   },
