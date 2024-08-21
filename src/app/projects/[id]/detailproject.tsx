@@ -74,12 +74,12 @@ const ProjectDetail: React.FC<CardListProps> = ({ projectData }) => {
             >
                 {project.images.map((image, index) => (
                     <SwiperSlide key={index}>
-                        <div className="relative w-full h-64 overflow-hidden rounded-lg cursor-pointer" onClick={() => handleImageClick(image)}>
+                        <div className="relative w-full h-64 overflow-hidden rounded-lg cursor-pointer flex justify-center" onClick={() => handleImageClick(image)}>
                             <Image
                                 src={image}
                                 alt={`Gambar ${index + 1}`}
                                 objectFit="cover"
-                                className={`rounded-lg transition duration-300 hover:scale-105 ${project.id === '4' ? 'w-auto h-auto' : 'w-[100%] h-[100%]'} w-[100%] h-[100%]`}
+                                className={`rounded-lg transition duration-300 hover:scale-105 ${project.id === '4' ? ' max-sm:w-[90%] lg:w-auto h-auto' : 'w-[100%] h-[100%]'} w-[100%] h-[100%]`}
                                 width={project.id === '4' ? 200 : 800}
                                 height={project.id === '4' ? 200 : 800}
                             />
