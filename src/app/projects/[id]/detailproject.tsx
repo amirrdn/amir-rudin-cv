@@ -79,9 +79,9 @@ const ProjectDetail: React.FC<CardListProps> = ({ projectData }) => {
                                 src={image}
                                 alt={`Gambar ${index + 1}`}
                                 objectFit="cover"
-                                className="rounded-lg"
-                                width={800}
-                                height={600}
+                                className={`rounded-lg transition duration-300 hover:scale-105 ${project.id === '4' ? 'w-auto h-auto' : 'w-[100%] h-[100%]'} w-[100%] h-[100%]`}
+                                width={project.id === '4' ? 200 : 800}
+                                height={project.id === '4' ? 200 : 800}
                             />
                         </div>
                     </SwiperSlide>
@@ -99,20 +99,28 @@ const ProjectDetail: React.FC<CardListProps> = ({ projectData }) => {
 
             {selectedImage && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50" onClick={handleCloseModal}>
-                    <div className="relative w-full max-w-2xl mx-auto">
+                    <div className={`relative ${project.id === '4' ? 'w-[25%] h-auto' : 'w-[60%] h-[60%] bottom-32'}`}>
                         <Image
                             src={selectedImage}
                             alt="Gambar Besar"
                             layout="responsive"
-                            width={800}
-                            height={600}
-                            className="rounded-lg"
+                            width={project.id === '4' ? 200 : 800}
+                            height={project.id === '4' ? 200 : 800}
+                            className={`rounded-lg transition duration-300 hover:scale-105 ${project.id === '4' ? 'w-auto h-auto' : 'w-[100%] h-[100%]'} w-[100%] h-[100%]`}
                         />
                         <button
-                            className="absolute top-2 right-2 text-white bg-red-600 rounded-full p-1 hover:bg-red-700"
+                            className="absolute top-1 right-1 text-white bg-red-600 rounded-full hover:bg-red-700"
                             onClick={handleCloseModal}
                         >
-                            &times;
+                            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path d="M16 8L8 16M8 8L16 16" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round"></path>
+                                </g>
+                            </svg>
                         </button>
                     </div>
                 </div>
