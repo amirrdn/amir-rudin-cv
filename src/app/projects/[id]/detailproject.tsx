@@ -99,14 +99,14 @@ const ProjectDetail: React.FC<CardListProps> = ({ projectData }) => {
 
             {selectedImage && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50" onClick={handleCloseModal}>
-                    <div className={`relative ${project.id === '4' ? ' max-sm:w-full p-4 lg:w-[25%] h-auto' : 'w-[60%] h-[60%] bottom-32'}`}>
+                    <div className={`relative ${project.id === '4' ? ' max-sm:w-full p-4 lg:w-[25%] h-auto' : 'max-sm:w-full max-sm:h-auto max-sm:p-4 lg:w-[60%] lg:h-[60%] bottom-32'}`}>
                         <Image
                             src={selectedImage}
                             alt="Gambar Besar"
                             layout="responsive"
                             width={project.id === '4' ? 200 : 800}
                             height={project.id === '4' ? 200 : 800}
-                            className={`rounded-lg transition duration-300 hover:scale-105 ${project.id === '4' ? 'w-auto h-auto' : 'w-[100%] h-[100%]'} w-[100%] h-[100%]`}
+                            className={`rounded-lg transition duration-300 hover:scale-105 ${project.id === '4' ? 'w-auto h-auto' : 'w-[100%] h-[100%]'}`}
                         />
                         <button
                             className="absolute top-1 right-1 text-white bg-red-600 rounded-full hover:bg-red-700"
