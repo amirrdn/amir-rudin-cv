@@ -69,7 +69,7 @@ const CardList: React.FC<CardListProps> = ({ projectsData }) => {
             <div className="mx-auto w-full max-w-7xl lg:px-8">
               <div className="relative px-4 sm:px-8 lg:px-12">
                 <div className="mx-auto max-w-2xl lg:max-w-5xl">
-                  <div className={`relative transition-all duration-300 ${isSticky ? 'mt-0 max-sm:left-[150px] lg:left-[165px]' : '-top-10'}`}>
+                  <div className={`relative transition-all duration-300 ${isSticky ? 'mt-0 max-sm:left-[155px] lg:left-[165px]' : '-top-10'}`}>
                     <a aria-label="Home" className="block h-16 w-16 origin-left pointer-events-auto" href="/">
                       <Image
                         alt=""
