@@ -99,7 +99,7 @@ const ProjectDetail: React.FC<CardListProps> = ({ projectData }) => {
 
             {selectedImage && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50" onClick={handleCloseModal}>
-                    <div className={`relative ${project.id === '4' ? 'w-[25%] h-auto' : 'w-[60%] h-[60%] bottom-32'}`}>
+                    <div className={`relative ${project.id === '4' ? ' max-sm:w-full p-4 lg:w-[25%] h-auto' : 'w-[60%] h-[60%] bottom-32'}`}>
                         <Image
                             src={selectedImage}
                             alt="Gambar Besar"
