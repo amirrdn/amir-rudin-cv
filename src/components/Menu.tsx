@@ -8,9 +8,9 @@ const [isOpen, setIsOpen] = useState(false);
 const toggleMenu = () => setIsOpen(!isOpen);
 
 return (
-<div className="relative">
+<div className="relative lg:hidden">
     {/* Toggle Button */}
-    <button className="lg:hidden p-3 text-white bg-blue-500 rounded-full fixed bottom-4 right-4 z-50 shadow-lg"
+    <button className="p-3 text-white bg-blue-500 rounded-full fixed bottom-4 right-4 z-50 shadow-lg"
         onClick={toggleMenu}>
         <svg className='w-5 h-5' viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>

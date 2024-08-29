@@ -1,0 +1,1576 @@
+[
+    {
+        "id": 1,
+        "title": "Laravel 11 CRUD",
+        "image": "/img/laravel-svgrepo-com.svg",
+        "leading": "Creating a CRUD (Create, Read, Update, Delete) application in Laravel 11",
+        "description": "<p>Creating a CRUD (Create, Read, Update, Delete) application in Laravel 11 involves several steps. Here's a guide to help you set it up:</p>",
+        "slug": "laravel-11-crud",
+        "html":[
+            {
+                "div": {
+                  "@class": "group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn",
+                  "div": {
+                    "@class": "flex-col gap-1 md:gap-3",
+                    "div": [
+                      {
+                        "@class": "flex max-w-full flex-col flex-grow",
+                        "div": {
+                          "@class": "min-h-[20px] text-message flex w-full flex-col items-end gap-2 break-words [.text-message+&amp;]:mt-5 overflow-x-auto whitespace-normal",
+                          "@dir": "auto",
+                          "@data-message-author-role": "assistant",
+                          "@data-message-id": "72fe8f05-7ed3-4aa8-aff0-9bbb479afe3f",
+                          "div": {
+                            "@class": "flex w-full flex-col gap-1 empty:hidden first:pt-[3px]",
+                            "div": {
+                              "@class": "markdown prose w-full break-words dark:prose-invert dark",
+                              "p": [
+                                "Creating a CRUD (Create, Read, Update, Delete) functionality in Laravel 11 involves several steps. Here’s a basic guide to get you started:",
+                                "First, make sure you have Laravel 11 installed. If you don’t have it yet, you can create a new project using:",
+                                {
+                                  "code": ".env",
+                                  "#text": [
+                                    "Set up your database and configure the connection in your",
+                                    "file:"
+                                  ]
+                                },
+                                {
+                                  "code": "Post",
+                                  "#text": [
+                                    "You can use Artisan commands to generate the necessary files. For example, if you want to create a",
+                                    "model:"
+                                  ]
+                                },
+                                "This command generates:",
+                                "Edit the migration file to define your table structure. For example:",
+                                "Run the migration to create the table:",
+                                "Edit the model to define any necessary attributes or relationships:",
+                                "Add CRUD operations to your controller:",
+                                "Define routes for your CRUD operations:",
+                                {
+                                  "code": "resources/views/posts",
+                                  "#text": [
+                                    "Create views for your CRUD operations in the",
+                                    "directory. For example:"
+                                  ]
+                                },
+                                {
+                                  "code": "index.blade.php",
+                                  "#text": [
+                                    "Here’s an example of a basic",
+                                    ":"
+                                  ]
+                                },
+                                "This should give you a basic CRUD setup in Laravel 11. You can further customize and extend these examples based on your requirements."
+                              ],
+                              "h3": [
+                                {
+                                  "strong": "Set Up Your Laravel Project",
+                                  "#text": "1."
+                                },
+                                {
+                                  "strong": {
+                                    "code": ".env",
+                                    "#text": "Create a Database and Configure Your"
+                                  },
+                                  "#text": "2."
+                                },
+                                {
+                                  "strong": "Generate a Model, Migration, and Controller",
+                                  "#text": "3."
+                                },
+                                {
+                                  "strong": "Define the Migration",
+                                  "#text": "4."
+                                },
+                                {
+                                  "strong": "Define the Model",
+                                  "#text": "5."
+                                },
+                                {
+                                  "strong": "Implement the Controller",
+                                  "#text": "6."
+                                },
+                                {
+                                  "strong": "Set Up Routes",
+                                  "#text": "7."
+                                },
+                                {
+                                  "strong": "Create Views",
+                                  "#text": "8."
+                                }
+                              ],
+                              "div": [
+                                {
+                                  "@class": "dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium",
+                                  "div": [
+                                    {
+                                      "@class": "flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md",
+                                      "div": {
+                                        "@class": "flex items-center",
+                                        "span": {
+                                          "@class": "",
+                                          "@data-state": "closed",
+                                          "button": {
+                                            "@class": "flex gap-1 items-center",
+                                            "#text": "Salin kode"
+                                          }
+                                        }
+                                      },
+                                      "#text": "bash"
+                                    },
+                                    {
+                                      "@class": "overflow-y-auto p-4",
+                                      "@dir": "ltr",
+                                      "code": {
+                                        "@class": "!whitespace-pre hljs language-bash",
+                                        "span": {
+                                          "@class": "hljs-string",
+                                          "#text": "\"11.*\""
+                                        },
+                                        "#text": "composer create-project laravel/laravel your-project-name"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "@class": "dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium",
+                                  "div": [
+                                    {
+                                      "@class": "flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md",
+                                      "div": {
+                                        "@class": "flex items-center",
+                                        "span": {
+                                          "@class": "",
+                                          "@data-state": "closed",
+                                          "button": {
+                                            "@class": "flex gap-1 items-center",
+                                            "#text": "Salin kode"
+                                          }
+                                        }
+                                      },
+                                      "#text": "env"
+                                    },
+                                    {
+                                      "@class": "overflow-y-auto p-4",
+                                      "@dir": "ltr",
+                                      "code": {
+                                        "@class": "!whitespace-pre hljs language-env",
+                                        "#text": "DB_CONNECTION=mysql\nDB_HOST=127.0.0.1\nDB_PORT=3306\nDB_DATABASE=your_database_name\nDB_USERNAME=your_database_user\nDB_PASSWORD=your_database_password"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "@class": "dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium",
+                                  "div": [
+                                    {
+                                      "@class": "flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md",
+                                      "div": {
+                                        "@class": "flex items-center",
+                                        "span": {
+                                          "@class": "",
+                                          "@data-state": "closed",
+                                          "button": {
+                                            "@class": "flex gap-1 items-center",
+                                            "#text": "Salin kode"
+                                          }
+                                        }
+                                      },
+                                      "#text": "bash"
+                                    },
+                                    {
+                                      "@class": "overflow-y-auto p-4",
+                                      "@dir": "ltr",
+                                      "code": {
+                                        "@class": "!whitespace-pre hljs language-bash",
+                                        "#text": "php artisan make:model Post -mcr"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "@class": "dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium",
+                                  "div": [
+                                    {
+                                      "@class": "flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md",
+                                      "div": {
+                                        "@class": "flex items-center",
+                                        "span": {
+                                          "@class": "",
+                                          "@data-state": "closed",
+                                          "button": {
+                                            "@class": "flex gap-1 items-center",
+                                            "#text": "Salin kode"
+                                          }
+                                        }
+                                      },
+                                      "#text": "php"
+                                    },
+                                    {
+                                      "@class": "overflow-y-auto p-4",
+                                      "@dir": "ltr",
+                                      "code": {
+                                        "@class": "!whitespace-pre hljs language-php",
+                                        "span": [
+                                          {
+                                            "@class": "hljs-comment",
+                                            "#text": "// database/migrations/xxxx_xx_xx_create_posts_table.php"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "use"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Illuminate"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Database"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Migrations"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Migration"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "use"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Illuminate"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Database"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Schema"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Blueprint"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "use"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Illuminate"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Support"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Facades"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Schema"
+                                          },
+                                          {
+                                            "@class": "hljs-class",
+                                            "span": [
+                                              {
+                                                "@class": "hljs-keyword",
+                                                "#text": "class"
+                                              },
+                                              {
+                                                "@class": "hljs-title",
+                                                "#text": "CreatePostsTable"
+                                              },
+                                              {
+                                                "@class": "hljs-keyword",
+                                                "#text": "extends"
+                                              },
+                                              {
+                                                "@class": "hljs-title",
+                                                "#text": "Migration"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "public"
+                                          },
+                                          {
+                                            "@class": "hljs-function",
+                                            "span": [
+                                              {
+                                                "@class": "hljs-keyword",
+                                                "#text": "function"
+                                              },
+                                              {
+                                                "@class": "hljs-title",
+                                                "#text": "up"
+                                              }
+                                            ],
+                                            "#text": "()"
+                                          },
+                                          {
+                                            "@class": "hljs-title class_",
+                                            "#text": "Schema"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "create"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'posts'"
+                                          },
+                                          {
+                                            "@class": "hljs-variable",
+                                            "#text": "$table"
+                                          },
+                                          {
+                                            "@class": "hljs-variable",
+                                            "#text": "$table"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "id"
+                                          },
+                                          {
+                                            "@class": "hljs-variable",
+                                            "#text": "$table"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "string"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'title'"
+                                          },
+                                          {
+                                            "@class": "hljs-variable",
+                                            "#text": "$table"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "text"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'content'"
+                                          },
+                                          {
+                                            "@class": "hljs-variable",
+                                            "#text": "$table"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "timestamps"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "public"
+                                          },
+                                          {
+                                            "@class": "hljs-function",
+                                            "span": [
+                                              {
+                                                "@class": "hljs-keyword",
+                                                "#text": "function"
+                                              },
+                                              {
+                                                "@class": "hljs-title",
+                                                "#text": "down"
+                                              }
+                                            ],
+                                            "#text": "()"
+                                          },
+                                          {
+                                            "@class": "hljs-title class_",
+                                            "#text": "Schema"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "dropIfExists"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'posts'"
+                                          }
+                                        ],
+                                        "#text": [
+                                          "\\",
+                                          "\\",
+                                          "\\",
+                                          ";",
+                                          "\\",
+                                          "\\",
+                                          "\\",
+                                          ";",
+                                          "\\",
+                                          "\\",
+                                          "\\",
+                                          ";",
+                                          "{",
+                                          "{",
+                                          "::",
+                                          "(",
+                                          ", function (Blueprint",
+                                          ") {",
+                                          "->",
+                                          "();",
+                                          "->",
+                                          "(",
+                                          ");",
+                                          "->",
+                                          "(",
+                                          ");",
+                                          "->",
+                                          "();\n });\n }",
+                                          "{",
+                                          "::",
+                                          "(",
+                                          ");\n }\n}"
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "@class": "dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium",
+                                  "div": [
+                                    {
+                                      "@class": "flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md",
+                                      "div": {
+                                        "@class": "flex items-center",
+                                        "span": {
+                                          "@class": "",
+                                          "@data-state": "closed",
+                                          "button": {
+                                            "@class": "flex gap-1 items-center",
+                                            "#text": "Salin kode"
+                                          }
+                                        }
+                                      },
+                                      "#text": "bash"
+                                    },
+                                    {
+                                      "@class": "overflow-y-auto p-4",
+                                      "@dir": "ltr",
+                                      "code": {
+                                        "@class": "!whitespace-pre hljs language-bash",
+                                        "#text": "php artisan migrate"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "@class": "dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium",
+                                  "div": [
+                                    {
+                                      "@class": "flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md",
+                                      "div": {
+                                        "@class": "flex items-center",
+                                        "span": {
+                                          "@class": "",
+                                          "@data-state": "closed",
+                                          "button": {
+                                            "@class": "flex gap-1 items-center",
+                                            "#text": "Salin kode"
+                                          }
+                                        }
+                                      },
+                                      "#text": "php"
+                                    },
+                                    {
+                                      "@class": "overflow-y-auto p-4",
+                                      "@dir": "ltr",
+                                      "code": {
+                                        "@class": "!whitespace-pre hljs language-php",
+                                        "span": [
+                                          {
+                                            "@class": "hljs-comment",
+                                            "#text": "// app/Models/Post.php"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "namespace"
+                                          },
+                                          {
+                                            "@class": "hljs-title class_",
+                                            "#text": "App"
+                                          },
+                                          {
+                                            "@class": "hljs-title class_",
+                                            "#text": "Models"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "use"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Illuminate"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Database"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Eloquent"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Factories"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "HasFactory"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "use"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Illuminate"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Database"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Eloquent"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Model"
+                                          },
+                                          {
+                                            "@class": "hljs-class",
+                                            "span": [
+                                              {
+                                                "@class": "hljs-keyword",
+                                                "#text": "class"
+                                              },
+                                              {
+                                                "@class": "hljs-title",
+                                                "#text": "Post"
+                                              },
+                                              {
+                                                "@class": "hljs-keyword",
+                                                "#text": "extends"
+                                              },
+                                              {
+                                                "@class": "hljs-title",
+                                                "#text": "Model"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "use"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "HasFactory"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "protected"
+                                          },
+                                          {
+                                            "@class": "hljs-variable",
+                                            "#text": "$fillable"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'title'"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'content'"
+                                          }
+                                        ],
+                                        "#text": [
+                                          "\\",
+                                          ";",
+                                          "\\",
+                                          "\\",
+                                          "\\",
+                                          "\\",
+                                          ";",
+                                          "\\",
+                                          "\\",
+                                          "\\",
+                                          ";",
+                                          "{",
+                                          ";",
+                                          "= [",
+                                          ",",
+                                          "];\n}"
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "@class": "dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium",
+                                  "div": [
+                                    {
+                                      "@class": "flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md",
+                                      "div": {
+                                        "@class": "flex items-center",
+                                        "span": {
+                                          "@class": "",
+                                          "@data-state": "closed",
+                                          "button": {
+                                            "@class": "flex gap-1 items-center",
+                                            "#text": "Salin kode"
+                                          }
+                                        }
+                                      },
+                                      "#text": "php"
+                                    },
+                                    {
+                                      "@class": "overflow-y-auto p-4",
+                                      "@dir": "ltr",
+                                      "code": {
+                                        "@class": "!whitespace-pre hljs language-php",
+                                        "span": [
+                                          {
+                                            "@class": "hljs-comment",
+                                            "#text": "// app/Http/Controllers/PostController.php"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "namespace"
+                                          },
+                                          {
+                                            "@class": "hljs-title class_",
+                                            "#text": "App"
+                                          },
+                                          {
+                                            "@class": "hljs-title class_",
+                                            "#text": "Http"
+                                          },
+                                          {
+                                            "@class": "hljs-title class_",
+                                            "#text": "Controllers"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "use"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "App"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Models"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Post"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "use"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Illuminate"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Http"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Request"
+                                          },
+                                          {
+                                            "@class": "hljs-class",
+                                            "span": [
+                                              {
+                                                "@class": "hljs-keyword",
+                                                "#text": "class"
+                                              },
+                                              {
+                                                "@class": "hljs-title",
+                                                "#text": "PostController"
+                                              },
+                                              {
+                                                "@class": "hljs-keyword",
+                                                "#text": "extends"
+                                              },
+                                              {
+                                                "@class": "hljs-title",
+                                                "#text": "Controller"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "public"
+                                          },
+                                          {
+                                            "@class": "hljs-function",
+                                            "span": [
+                                              {
+                                                "@class": "hljs-keyword",
+                                                "#text": "function"
+                                              },
+                                              {
+                                                "@class": "hljs-title",
+                                                "#text": "index"
+                                              }
+                                            ],
+                                            "#text": "()"
+                                          },
+                                          {
+                                            "@class": "hljs-variable",
+                                            "#text": "$posts"
+                                          },
+                                          {
+                                            "@class": "hljs-title class_",
+                                            "#text": "Post"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "all"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "return"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "view"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'posts.index'"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "compact"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'posts'"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "public"
+                                          },
+                                          {
+                                            "@class": "hljs-function",
+                                            "span": [
+                                              {
+                                                "@class": "hljs-keyword",
+                                                "#text": "function"
+                                              },
+                                              {
+                                                "@class": "hljs-title",
+                                                "#text": "create"
+                                              }
+                                            ],
+                                            "#text": "()"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "return"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "view"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'posts.create'"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "public"
+                                          },
+                                          {
+                                            "@class": "hljs-function",
+                                            "span": [
+                                              {
+                                                "@class": "hljs-keyword",
+                                                "#text": "function"
+                                              },
+                                              {
+                                                "@class": "hljs-title",
+                                                "#text": "store"
+                                              },
+                                              {
+                                                "@class": "hljs-params",
+                                                "span": {
+                                                  "@class": "hljs-variable",
+                                                  "#text": "$request"
+                                                },
+                                                "#text": "Request"
+                                              }
+                                            ],
+                                            "#text": [
+                                              "(",
+                                              ")"
+                                            ]
+                                          },
+                                          {
+                                            "@class": "hljs-variable",
+                                            "#text": "$request"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "validate"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'title'"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'required'"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'content'"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'required'"
+                                          },
+                                          {
+                                            "@class": "hljs-title class_",
+                                            "#text": "Post"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "create"
+                                          },
+                                          {
+                                            "@class": "hljs-variable",
+                                            "#text": "$request"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "all"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "return"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "redirect"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "route"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'posts.index'"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "with"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'success'"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'Post created successfully.'"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "public"
+                                          },
+                                          {
+                                            "@class": "hljs-function",
+                                            "span": [
+                                              {
+                                                "@class": "hljs-keyword",
+                                                "#text": "function"
+                                              },
+                                              {
+                                                "@class": "hljs-title",
+                                                "#text": "show"
+                                              },
+                                              {
+                                                "@class": "hljs-params",
+                                                "span": {
+                                                  "@class": "hljs-variable",
+                                                  "#text": "$post"
+                                                },
+                                                "#text": "Post"
+                                              }
+                                            ],
+                                            "#text": [
+                                              "(",
+                                              ")"
+                                            ]
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "return"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "view"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'posts.show'"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "compact"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'post'"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "public"
+                                          },
+                                          {
+                                            "@class": "hljs-function",
+                                            "span": [
+                                              {
+                                                "@class": "hljs-keyword",
+                                                "#text": "function"
+                                              },
+                                              {
+                                                "@class": "hljs-title",
+                                                "#text": "edit"
+                                              },
+                                              {
+                                                "@class": "hljs-params",
+                                                "span": {
+                                                  "@class": "hljs-variable",
+                                                  "#text": "$post"
+                                                },
+                                                "#text": "Post"
+                                              }
+                                            ],
+                                            "#text": [
+                                              "(",
+                                              ")"
+                                            ]
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "return"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "view"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'posts.edit'"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "compact"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'post'"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "public"
+                                          },
+                                          {
+                                            "@class": "hljs-function",
+                                            "span": [
+                                              {
+                                                "@class": "hljs-keyword",
+                                                "#text": "function"
+                                              },
+                                              {
+                                                "@class": "hljs-title",
+                                                "#text": "update"
+                                              },
+                                              {
+                                                "@class": "hljs-params",
+                                                "span": [
+                                                  {
+                                                    "@class": "hljs-variable",
+                                                    "#text": "$request"
+                                                  },
+                                                  {
+                                                    "@class": "hljs-variable",
+                                                    "#text": "$post"
+                                                  }
+                                                ],
+                                                "#text": [
+                                                  "Request",
+                                                  ", Post"
+                                                ]
+                                              }
+                                            ],
+                                            "#text": [
+                                              "(",
+                                              ")"
+                                            ]
+                                          },
+                                          {
+                                            "@class": "hljs-variable",
+                                            "#text": "$request"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "validate"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'title'"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'required'"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'content'"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'required'"
+                                          },
+                                          {
+                                            "@class": "hljs-variable",
+                                            "#text": "$post"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "update"
+                                          },
+                                          {
+                                            "@class": "hljs-variable",
+                                            "#text": "$request"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "all"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "return"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "redirect"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "route"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'posts.index'"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "with"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'success'"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'Post updated successfully.'"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "public"
+                                          },
+                                          {
+                                            "@class": "hljs-function",
+                                            "span": [
+                                              {
+                                                "@class": "hljs-keyword",
+                                                "#text": "function"
+                                              },
+                                              {
+                                                "@class": "hljs-title",
+                                                "#text": "destroy"
+                                              },
+                                              {
+                                                "@class": "hljs-params",
+                                                "span": {
+                                                  "@class": "hljs-variable",
+                                                  "#text": "$post"
+                                                },
+                                                "#text": "Post"
+                                              }
+                                            ],
+                                            "#text": [
+                                              "(",
+                                              ")"
+                                            ]
+                                          },
+                                          {
+                                            "@class": "hljs-variable",
+                                            "#text": "$post"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "delete"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "return"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "redirect"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "route"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'posts.index'"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "with"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'success'"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'Post deleted successfully.'"
+                                          }
+                                        ],
+                                        "#text": [
+                                          "\\",
+                                          "\\",
+                                          ";",
+                                          "\\",
+                                          "\\",
+                                          ";",
+                                          "\\",
+                                          "\\",
+                                          ";",
+                                          "{",
+                                          "{",
+                                          "=",
+                                          "::",
+                                          "();",
+                                          "(",
+                                          ",",
+                                          "(",
+                                          "));\n }",
+                                          "{",
+                                          "(",
+                                          ");\n }",
+                                          "{",
+                                          "->",
+                                          "([",
+                                          "=>",
+                                          ",",
+                                          "=>",
+                                          ",\n ]);",
+                                          "::",
+                                          "(",
+                                          "->",
+                                          "());",
+                                          "()->",
+                                          "(",
+                                          ")\n ->",
+                                          "(",
+                                          ",",
+                                          ");\n }",
+                                          "{",
+                                          "(",
+                                          ",",
+                                          "(",
+                                          "));\n }",
+                                          "{",
+                                          "(",
+                                          ",",
+                                          "(",
+                                          "));\n }",
+                                          "{",
+                                          "->",
+                                          "([",
+                                          "=>",
+                                          ",",
+                                          "=>",
+                                          ",\n ]);",
+                                          "->",
+                                          "(",
+                                          "->",
+                                          "());",
+                                          "()->",
+                                          "(",
+                                          ")\n ->",
+                                          "(",
+                                          ",",
+                                          ");\n }",
+                                          "{",
+                                          "->",
+                                          "();",
+                                          "()->",
+                                          "(",
+                                          ")\n ->",
+                                          "(",
+                                          ",",
+                                          ");\n }\n}"
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "@class": "dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium",
+                                  "div": [
+                                    {
+                                      "@class": "flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md",
+                                      "div": {
+                                        "@class": "flex items-center",
+                                        "span": {
+                                          "@class": "",
+                                          "@data-state": "closed",
+                                          "button": {
+                                            "@class": "flex gap-1 items-center",
+                                            "#text": "Salin kode"
+                                          }
+                                        }
+                                      },
+                                      "#text": "php"
+                                    },
+                                    {
+                                      "@class": "overflow-y-auto p-4",
+                                      "@dir": "ltr",
+                                      "code": {
+                                        "@class": "!whitespace-pre hljs language-php",
+                                        "span": [
+                                          {
+                                            "@class": "hljs-comment",
+                                            "#text": "// routes/web.php"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "use"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "App"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Http"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "Controllers"
+                                          },
+                                          {
+                                            "@class": "hljs-title",
+                                            "#text": "PostController"
+                                          },
+                                          {
+                                            "@class": "hljs-title class_",
+                                            "#text": "Route"
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "resource"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'posts'"
+                                          },
+                                          {
+                                            "@class": "hljs-title class_",
+                                            "#text": "PostController"
+                                          },
+                                          {
+                                            "@class": "hljs-variable language_",
+                                            "#text": "class"
+                                          }
+                                        ],
+                                        "#text": [
+                                          "\\",
+                                          "\\",
+                                          "\\",
+                                          ";",
+                                          "::",
+                                          "(",
+                                          ",",
+                                          "::",
+                                          ");"
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "@class": "dark bg-gray-950 contain-inline-size rounded-md border-[0.5px] border-token-border-medium",
+                                  "div": [
+                                    {
+                                      "@class": "flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md",
+                                      "div": {
+                                        "@class": "flex items-center",
+                                        "span": {
+                                          "@class": "",
+                                          "@data-state": "closed",
+                                          "button": {
+                                            "@class": "flex gap-1 items-center",
+                                            "#text": "Salin kode"
+                                          }
+                                        }
+                                      },
+                                      "#text": "php"
+                                    },
+                                    {
+                                      "@class": "overflow-y-auto p-4",
+                                      "@dir": "ltr",
+                                      "code": {
+                                        "@class": "!whitespace-pre hljs language-php",
+                                        "span": [
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "\"{{ route('posts.create') }}\""
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "foreach"
+                                          },
+                                          {
+                                            "@class": "hljs-variable",
+                                            "#text": "$posts"
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "as"
+                                          },
+                                          {
+                                            "@class": "hljs-variable",
+                                            "#text": "$post"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "span": {
+                                              "@class": "hljs-subst",
+                                              "#text": "$post"
+                                            },
+                                            "#text": [
+                                              "\"{{ route('posts.show',",
+                                              "->id) }}\""
+                                            ]
+                                          },
+                                          {
+                                            "@class": "hljs-variable",
+                                            "#text": "$post"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "span": {
+                                              "@class": "hljs-subst",
+                                              "#text": "$post"
+                                            },
+                                            "#text": [
+                                              "\"{{ route('posts.edit',",
+                                              "->id) }}\""
+                                            ]
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "span": {
+                                              "@class": "hljs-subst",
+                                              "#text": "$post"
+                                            },
+                                            "#text": [
+                                              "\"{{ route('posts.destroy',",
+                                              "->id) }}\""
+                                            ]
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "\"POST\""
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "\"display:inline;\""
+                                          },
+                                          {
+                                            "@class": "hljs-title function_ invoke__",
+                                            "#text": "method"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "'DELETE'"
+                                          },
+                                          {
+                                            "@class": "hljs-string",
+                                            "#text": "\"submit\""
+                                          },
+                                          {
+                                            "@class": "hljs-keyword",
+                                            "#text": "endforeach"
+                                          }
+                                        ],
+                                        "#text": [
+                                          "<!-- resources/views/posts/index.blade.php -->\n\n<!DOCTYPE html>\n<html>\n<head>\n <title>Posts</title>\n</head>\n<body>\n <h1>Posts</h1>\n <a href=",
+                                          ">Create New Post</a>\n\n <ul>\n @",
+                                          "(",
+                                          ")\n <li>\n <a href=",
+                                          ">{{",
+                                          "->title }}</a>\n <a href=",
+                                          ">Edit</a>\n <form action=",
+                                          "method=",
+                                          "style=",
+                                          ">\n @csrf\n @",
+                                          "(",
+                                          ")\n <button type=",
+                                          ">Delete</button>\n </form>\n </li>\n @",
+                                          "</ul>\n</body>\n</html>"
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              ],
+                              "ul": [
+                                {
+                                  "li": [
+                                    {
+                                      "code": "Post.php",
+                                      "#text": [
+                                        "A model (",
+                                        ")"
+                                      ]
+                                    },
+                                    {
+                                      "code": "xxxx_xx_xx_create_posts_table.php",
+                                      "#text": [
+                                        "A migration file (",
+                                        ")"
+                                      ]
+                                    },
+                                    {
+                                      "code": "PostController.php",
+                                      "#text": [
+                                        "A controller (",
+                                        ")"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "li": [
+                                    {
+                                      "code": "index.blade.php",
+                                      "#text": ": Display a list of posts."
+                                    },
+                                    {
+                                      "code": "create.blade.php",
+                                      "#text": ": Show a form to create a new post."
+                                    },
+                                    {
+                                      "code": "edit.blade.php",
+                                      "#text": ": Show a form to edit an existing post."
+                                    },
+                                    {
+                                      "code": "show.blade.php",
+                                      "#text": ": Display a single post."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "@class": "mt-1 flex gap-3 empty:hidden -ml-2",
+                        "div": {
+                          "@class": "items-center justify-start rounded-xl p-1 flex",
+                          "div": {
+                            "@class": "flex items-center",
+                            "button": [
+                              {
+                                "@class": "rounded-lg text-token-text-secondary hover:bg-token-main-surface-secondary",
+                                "@aria-label": "Read Aloud"
+                              },
+                              {
+                                "@class": "rounded-lg text-token-text-secondary hover:bg-token-main-surface-secondary",
+                                "@aria-label": "Salin"
+                              },
+                              {
+                                "@class": "rounded-lg text-token-text-secondary hover:bg-token-main-surface-secondary",
+                                "@aria-label": "Buat ulang"
+                              }
+                            ],
+                            "div": [
+                              {
+                                "@class": "flex"
+                              },
+                              {
+                                "@class": "flex items-center pb-0",
+                                "div": {
+                                  "@class": "[&amp;_svg]:h-full [&amp;_svg]:w-full icon-md h-4 w-4"
+                                },
+                                "span": {
+                                  "@class": "overflow-hidden text-clip whitespace-nowrap text-sm",
+                                  "@style": "opacity: 0; padding-left: 0px; width: 0px;",
+                                  "#text": "4o mini"
+                                }
+                              }
+                            ],
+                            "span": {
+                              "@class": "",
+                              "@data-state": "closed",
+                              "button": {
+                                "@id": "radix-:rv0:",
+                                "@class": "cursor-pointer h-[30px] rounded-md px-1 text-token-text-secondary hover:bg-token-main-surface-secondary",
+                                "@type": "button",
+                                "@aria-haspopup": "menu",
+                                "@aria-expanded": "false",
+                                "@data-state": "closed"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "@class": "pr-2 lg:pr-0"
+                      },
+                      {
+                        "@class": "mt-3 w-full empty:hidden",
+                        "div": {
+                          "@class": "text-center"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+        ]
+    }
+]

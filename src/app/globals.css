@@ -73,3 +73,6 @@ body {
 .react-calendar__month-view__days{
   @apply text-gray-600;
 }
+pre code{
+  float: left !important;
+}

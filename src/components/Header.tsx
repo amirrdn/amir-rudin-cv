@@ -72,7 +72,7 @@ const Header: FC = () => {
       <div className="container mx-auto flex justify-between items-center p-4">
       <Link href="/"><h1 className="text-3xl font-bold">AMIR RUDIN</h1></Link>
         <nav className="hidden md:flex space-x-6">
-          <Link href="/articles" className={`hover:text-teal-500 ${pathname === '/articles' ? 'text-teal-500' : ''}`}>Articles</Link>
+          <Link href="/article" className={`hover:text-teal-500 ${pathname === '/article' ? 'text-teal-500' : ''}`}>Articles</Link>
           <Link href="/projects" className={`hover:text-teal-500 ${pathname === '/projects' ? 'text-teal-500' : ''}`}>Projects</Link>
           <Link href="/cv/id" className={`hover:text-teal-500 ${pathname === '/cv/id' || pathname === '/cv/en' ? 'text-teal-500' : ''}`}>CV</Link>
         </nav>
