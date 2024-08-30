@@ -4,6 +4,7 @@ import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../../../lib/firebaseConfig';
 import Laravelpage from '../laravel';
 import Image from "next/image";
+import Shopchart from '../shopchart';
 
 interface Project {
   id: number
@@ -86,16 +87,22 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
               <div className="prose w-full break-words">
                 <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
                 <section className="container mx-auto p-4 dark:text-white overflow-hidden">
-                <Image
-                        src={project.image}
-                        alt={project.title}
-                        width={500}
-                        height={300}
-                        className="w-full h-48 mb-14"
-                    />
+                  <div className='flex justify-center items-center w-full'>
+                    <Image
+                            src={project.image}
+                            alt={project.title}
+                            width={500}
+                            height={300}
+                            className="mb-14"
+                        />
+                  </div>
                   {
                     project.slug === 'laravel-11-crud' ?
                     <Laravelpage /> : ''
+                  }
+                  {
+                    project.slug === 'creating-shopping-cart-in-reactjs' ?
+                    <Shopchart /> : ''
                   }
                 </section>
               </div>

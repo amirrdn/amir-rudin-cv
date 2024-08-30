@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://amir-rudin-portofolio.vercel.app
+
+# Sitemaps
+Sitemap: https://amir-rudin-portofolio.vercel.app/sitemap.xml

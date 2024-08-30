@@ -76,3 +76,35 @@ body {
 pre code{
   float: left !important;
 }
+.hljs-comment {
+  color: #ffffff80;
+}
+.hljs-doctag, .hljs-formula, .hljs-keyword, .hljs-literal {
+  color: #2e95d3;
+}
+.hljs-bullet, .hljs-link, .hljs-selector-id, .hljs-symbol, .hljs-title {
+  color: #f22c3d;
+}
+.hljs-addition, .hljs-attribute, .hljs-meta-string, .hljs-regexp, .hljs-string {
+  color: #00a67d;
+}
+.hljs-bullet, .hljs-link, .hljs-selector-id, .hljs-symbol, .hljs-title {
+  color: #f22c3d;
+}
+.hljs-attr, .hljs-number, .hljs-selector-attr, .hljs-selector-class, .hljs-selector-pseudo, .hljs-template-variable, .hljs-type, .hljs-variable {
+  color: #df3079;
+}
+.hljs-attr, .hljs-number, .hljs-selector-attr, .hljs-selector-class, .hljs-selector-pseudo, .hljs-template-variable, .hljs-type, .hljs-variable {
+  color: #df3079;
+}
+[dir=ltr] code.hljs, [dir=ltr] code[class*=language-], [dir=ltr] pre[class*=language-] {
+  text-align: left;
+}
+:not(pre)>code.hljs, :not(pre)>code[class*=language-] {
+  border-radius: .3em;
+  padding: .1em;
+  white-space: normal;
+}
+.hljs-built_in, .hljs-class .hljs-title {
+  color: #e9950c;
+}
