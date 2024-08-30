@@ -36,7 +36,9 @@ return (
             <li>
                 <Link href="/projects" onClick={()=> setIsOpen(false)}>Projects</Link>
             </li>
-            
+            <li>
+                <Link href="/article" onClick={()=> setIsOpen(false)}>Articles</Link>
+            </li>
         </ul>
     </nav>
 </div>

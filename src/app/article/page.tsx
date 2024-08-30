@@ -5,8 +5,8 @@ import { db } from "../../lib/firebaseConfig";
 import CardArticle from "./card";
 
 export const metadata: Metadata = {
-  title: 'Projects - Amir Rudin',
-  description: 'Explore my projects and see what I have created.',
+  title: 'Programing Articles - Amir Rudin',
+  description: 'What about programming.',
   robots: {
     index: true,
     follow: true,
