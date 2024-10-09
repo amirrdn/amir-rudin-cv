@@ -6,7 +6,14 @@
             "title": "Web Developer",
             "company": "PT Trasmediacom",
             "address_work": "Cakung, East Jakarta",
-            "jobdesc": "Make a website portal busines, web based marketing.",
+            "jobdesc": [
+                "Developed a business portal website focusing on web-based marketing to help companies increase user exposure and engagement.",
+                "Built and managed a robust backend using Laravel, ensuring the system runs efficiently and securely.",
+                "Used Vue.js to create dynamic and interactive user interfaces (UI), improving the overall user experience.",
+                "Integrated MySQL as a database for optimal data storage and management.",
+                "Implemented Bootstrap for a responsive and mobile-friendly interface design, ensuring accessibility across various devices.",
+                "Collaborated with design and marketing teams to optimize website performance and implement new features based on client needs."
+            ],
             "date_work": [
                 "01 January 2015",
                 "11 January 2018"
@@ -16,7 +23,16 @@
             "title": "IT Developer",
             "company": "PT Smartfren Tbk",
             "address_work": "BSD, Tangerang Banten",
-            "jobdesc": "Creating web-based HRIS, procurement",
+            "jobdesc": [
+                "Develop and implement a web-based HRIS (Human Resource Information System) to increase operational efficiency in human resource management.",
+                "Using Business Process Maker to design and automate HR workflows such as managing employee data, leave, and payroll.",
+                "Building a backend with a combination of Laravel and CodeIgniter, creating a secure and scalable system for processing complex HR data.",
+                "Created an interactive and user-friendly frontend using Vue.js and Bootstrap, ensuring the application was responsive and easy to use across devices.",
+                "Integrate MySQL and Oracle for employee data management, payroll, and financial reports, as well as perform query optimization to minimize latency.",
+                "Collaborate with HR and management teams to add custom features according to business needs and ensure the system complies with labor regulations.",
+                "Successfully increased HR process efficiency by up to 40% by developing automation features and integration between various modules in HRIS.",
+                "Tech: Bussiness Process Maker, Laravel, Codeigniter, Vuejs, Bootstrap, Oracle"
+            ],
             "date_work": [
                 "16 January 2018",
                 "24 November 2020"
@@ -26,7 +42,16 @@
             "title": "Fullstack Developer",
             "company": "Folie A Trois Solution (Remote)",
             "address_work": "Kuala Lumpur, Malaysia",
-            "jobdesc": "Create a web & Android based warehouse",
+            "jobdesc": [
+                "Developed a Comprehensive Warehouse Management System: Created a robust web-based and Android application to streamline warehouse operations, improving inventory management and tracking efficiency.",
+                "Utilized Laravel for Backend Development: Designed and implemented a secure, scalable backend using Laravel, enabling efficient data processing and storage for warehouse transactions.",
+                "Implemented JavaScript for Frontend Functionality: Leveraged JavaScript to enhance user experience and create interactive features, ensuring a seamless interface for warehouse staff and management.",
+                "Adopted Flutter for Cross-Platform Compatibility: Developed an Android application using Flutter, providing a consistent and responsive user interface across devices and enhancing accessibility for warehouse operations.",
+                "Integrated Real-Time Data Synchronization: Ensured that data between the web and mobile applications was synchronized in real-time, facilitating accurate inventory tracking and management.",
+                "Collaborated with Stakeholders: Worked closely with warehouse management and staff to gather requirements, ensuring the application met their needs and improved operational workflows.",
+                "Conducted Testing and Quality Assurance: Performed rigorous testing and debugging to ensure system reliability and performance, ultimately reducing operational errors by 100%.",
+                "Tech: Flutter, Laravel, Javascript & Bootstrap"
+            ],
             "date_work": [
                 "01 July 2023",
                 "01 February 2024"
@@ -36,7 +61,19 @@
             "title": "Web Developer",
             "company": "PT Alat Bantu Dengar Indonesia",
             "address_work": "Salemba, Jakarta Pusat",
-            "jobdesc": "Make web based Procurement & CRM",
+            "jobdesc": [
+                "Membangun Sistem Pengadaan Berbasis Web: Mengembangkan aplikasi pengadaan berbasis web yang efektif menggunakan Laravel untuk backend, memastikan pengelolaan data yang efisien dan aman.",
+                "Mengembangkan CRM Responsif: Merancang dan mengimplementasikan sistem Manajemen Hubungan Pelanggan (CRM) yang intuitif dengan Vue.js dan React.js, memberikan pengalaman pengguna yang luar biasa.",
+                "Integrasi API yang Kuat: Membangun API dengan Node.js dan Laravel untuk mendukung interaksi antar sistem, memungkinkan pertukaran data yang mulus dan cepat.",
+                "Antarmuka Pengguna yang Menarik: Menggunakan Tailwind, Bootstrap, dan PrimeVue untuk menciptakan antarmuka pengguna yang responsif dan estetis, meningkatkan kepuasan pengguna.",
+                "Implementasi Real-Time Communication: Mengintegrasikan Socket.io untuk komunikasi real-time antara pengguna, meningkatkan kolaborasi dan responsivitas dalam aplikasi.",
+                "Penggunaan Firebase: Memanfaatkan Firebase untuk otentikasi pengguna dan penyimpanan data secara real-time, memastikan keandalan dan keamanan aplikasi.",
+                "Backend Development: Laravel, Nodejs.",
+                "Frontend Development: Vuejs, Reactjs.",
+                "UI/UX Design: Tailwind, Bootstrap, PrimeVue.",
+                "Real-Time Communication: Socketio.",
+                "Database & Storage: Firebase & Mysql."
+            ],
             "date_work": [
                 "02 December 2020",
                 "24 July 2024"

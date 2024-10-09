@@ -76,9 +76,13 @@ const Rightcolumn = ({ dictionary }: { dictionary: { intro: string; exprience?: 
                                         <p className="text-base font-bold mb-2">{b.company}</p>
                                         <p className="text-sm mb-2">{b.address_work}</p>
                                         <p className="text-sm mb-2"> {b.date_work.join(' - ')}</p>
-                                        <p>
-                                            {b.jobdesc}
-                                        </p>
+                                        <ul className="list-disc ml-5">
+                            {Array.isArray(b.jobdesc) && b.jobdesc.map((desc: string, descIndex: number) => (
+                                <li key={descIndex} className="text-sm mb-2">
+                                    {descIndex === b.jobdesc.length - 1 ? desc : desc }
+                                </li>
+                            ))}
+                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -91,9 +95,9 @@ const Rightcolumn = ({ dictionary }: { dictionary: { intro: string; exprience?: 
             </div>
         </div>
         </div>
-        <div className="mb-5 mt-10 flex justify-center items-center">
+        {/* <div className="mb-5 mt-10 flex justify-center items-center">
         <Calendars />
-        </div>
+        </div> */}
     </>)
 }
 

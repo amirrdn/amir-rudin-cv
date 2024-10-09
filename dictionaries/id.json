@@ -6,7 +6,14 @@
             "title": "Web Developer",
             "company": "PT Trasmediacom",
             "address_work": "Cakung, Jakarta Timur",
-            "jobdesc": "Membuat website portal bisnis, web based marketing.",
+            "jobdesc": [
+                "Mengembangkan website portal bisnis yang berfokus pada web-based marketing untuk membantu perusahaan dalam meningkatkan eksposur dan engagement pengguna.",
+                "Membangun dan mengelola backend yang kuat menggunakan Laravel, memastikan sistem berjalan efisien dan aman.",
+                "Menggunakan Vue.js untuk membuat antarmuka pengguna (UI) yang dinamis dan interaktif, meningkatkan pengalaman pengguna secara keseluruhan.",
+                "Mengintegrasikan MySQL sebagai basis data untuk penyimpanan dan manajemen data yang optimal.",
+                "Mengimplementasikan Bootstrap untuk desain antarmuka yang responsif dan mobile-friendly, sehingga dapat diakses dengan baik di berbagai perangkat.",
+                "Berkolaborasi dengan tim desain dan pemasaran untuk mengoptimalkan performa website serta menerapkan fitur-fitur baru sesuai kebutuhan klien."
+            ],
             "date_work": [
                 "01 Januari 2015",
                 "11 Januari 2018"
@@ -16,7 +23,16 @@
             "title": "IT Developer",
             "company": "PT Smartfren Tbk",
             "address_work": "BSD, Tangerang Banten",
-            "jobdesc": "Membuat HRIS berbasis web, pengadaan",
+            "jobdesc": [
+                "Mengembangkan dan mengimplementasikan HRIS (Human Resource Information System) berbasis web untuk meningkatkan efisiensi operasional dalam manajemen sumber daya manusia.",
+                "Menggunakan Business Process Maker untuk merancang dan mengotomatisasi alur kerja (workflow) HR seperti pengelolaan data karyawan, cuti, dan payroll.",
+                "Membangun backend dengan kombinasi Laravel dan CodeIgniter, menciptakan sistem yang aman dan scalable untuk memproses data HR yang kompleks.",
+                "Membuat frontend interaktif dan user-friendly menggunakan Vue.js dan Bootstrap, memastikan aplikasi responsif dan mudah digunakan di berbagai perangkat.",
+                "Mengintegrasikan MySQL dan Oracle untuk manajemen data karyawan, penggajian, dan laporan keuangan, serta melakukan optimasi query untuk meminimalisir latensi.",
+                "Berkolaborasi dengan tim HR dan manajemen untuk menambahkan fitur-fitur kustom sesuai kebutuhan bisnis dan memastikan sistem sesuai dengan regulasi ketenagakerjaan.",
+                "Berhasil meningkatkan efisiensi proses HR hingga 40% dengan pengembangan fitur otomatisasi dan integrasi antara berbagai modul dalam HRIS.",
+                "Tech: Bussiness Process Maker, Laravel, Codeigniter, Vuejs, Bootstrap, Oracle"
+            ],
             "date_work": [
                 "16 Januari 2018",
                 "24 November 2020"
@@ -26,7 +42,16 @@
             "title": "Fullstack Developer",
             "company": "Folie A Trois Solution (Remote)",
             "address_work": "Kuala Lumpur, Malaysia",
-            "jobdesc": "Membuat Gudang berbasis web & android",
+            "jobdesc": [
+                "Mengembangkan Sistem Manajemen Gudang yang Komprehensif: Menciptakan aplikasi berbasis web dan Android yang kuat untuk merampingkan operasi gudang, meningkatkan manajemen dan pelacakan inventaris.",
+                "Memanfaatkan Laravel untuk Pengembangan Backend: Merancang dan mengimplementasikan backend yang aman dan dapat diskalakan menggunakan Laravel, memungkinkan pemrosesan dan penyimpanan data yang efisien untuk transaksi gudang.",
+                "Mengimplementasikan JavaScript untuk Fungsionalitas Frontend: Memanfaatkan JavaScript untuk meningkatkan pengalaman pengguna dan menciptakan fitur interaktif, memastikan antarmuka yang mulus bagi staf dan manajemen gudang.",
+                "Mengadopsi Flutter untuk Kompatibilitas Lintas Platform: Mengembangkan aplikasi Android menggunakan Flutter, menyediakan antarmuka pengguna yang konsisten dan responsif di berbagai perangkat, serta meningkatkan aksesibilitas untuk operasi gudang.",
+                "Mengintegrasikan Sinkronisasi Data Real-Time: Memastikan data antara aplikasi web dan mobile tersinkronisasi secara real-time, memfasilitasi pelacakan dan manajemen inventaris yang akurat.",
+                "Berkolaborasi dengan Pemangku Kepentingan: Bekerja sama dengan manajemen gudang dan staf untuk mengumpulkan kebutuhan, memastikan aplikasi memenuhi kebutuhan mereka dan meningkatkan alur kerja operasional.",
+                "Melakukan Pengujian dan Jaminan Kualitas: Melakukan pengujian dan debugging yang ketat untuk memastikan keandalan dan kinerja sistem, akhirnya mengurangi kesalahan operasional sebesar 100%.",
+                "Tech: Flutter, Laravel, Javascript & Bootstrap"
+            ],
             "date_work": [
                 "01 Juli 2023",
                 "01 Februari 2024"
@@ -36,7 +61,19 @@
             "title": "Web Developer",
             "company": "PT Alat Bantu Dengar Indonesia",
             "address_work": "Salemba, Jakarta Pusat",
-            "jobdesc": "Membuat Pengadaan & CRM berbasis web",
+            "jobdesc": [
+                "Building a Web Based Procurement System: Developed an effective web based procurement application using Laravel for the backend, ensuring efficient and secure data management.",
+                "Developed Responsive CRM: Designed and implemented an intuitive Customer Relationship Management (CRM) system with Vue.js and React.js, providing an exceptional user experience.",
+                "Strong API Integration: Built APIs with Node.js and Laravel to support interaction between systems, enabling seamless and fast data exchange.",
+                "Engaging User Interface: Used Tailwind, Bootstrap, and PrimeVue to create a responsive and aesthetic user interface, increasing user satisfaction.",
+                "Real-Time Communication Implementation: Integrated Socket.io for real-time communication between users, improving collaboration and responsiveness in applications.",
+                "Use of Firebase: Leveraged Firebase for real-time user authentication and data storage, ensuring application reliability and security.",
+                "Backend Development: Laravel, Nodejs.",
+                "Frontend Development: Vuejs, Reactjs.",
+                "UI/UX Design: Tailwind, Bootstrap, PrimeVue.",
+                "Real-Time Communication: Socketio.",
+                "Database & Storage: Firebase & Mysql."
+            ],
             "date_work": [
                 "02 Desember 2020",
                 "24 Juli 2024"
