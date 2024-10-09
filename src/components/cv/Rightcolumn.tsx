@@ -95,9 +95,9 @@ const Rightcolumn = ({ dictionary }: { dictionary: { intro: string; exprience?: 
             </div>
         </div>
         </div>
-        {/* <div className="mb-5 mt-10 flex justify-center items-center">
+        <div className="mb-5 mt-10 flex justify-center items-center">
         <Calendars />
-        </div> */}
+        </div>
     </>)
 }
 
