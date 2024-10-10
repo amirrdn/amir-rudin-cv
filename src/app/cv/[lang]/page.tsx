@@ -72,9 +72,10 @@ export default async function HomeCV({
                         exprience: dictionary.exprience?.map(item => ({
                             title: item.title,
                             company: item.company,
-                            date_work: [], // Ubah ini sesuai kebutuhan
+                            date_work: item.date_work,
                             jobdesc: item.jobdesc,
-                            address_work: item.address_work
+                            address_work: item.address_work,
+                            id: item.id
                         })) 
                     }} />
                 </div>

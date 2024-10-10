@@ -1,6 +1,6 @@
 
 import Calendars from "../Calendar";
-const Rightcolumn = ({ dictionary }: { dictionary: { intro: string; exprience?: { title: string; company: string; date_work: []; jobdesc: string[]; address_work: string }[] } }) => {
+const Rightcolumn = ({ dictionary }: { dictionary: { intro: string; exprience?: { title: string; company: string; date_work: string[]; jobdesc: string[]; address_work: string, id: number }[] } }) => {
     return(<>
         <div className="flex-shrink-0 w-full h-px bg-current" />
         <div className="mt-2 mb-2">
@@ -64,32 +64,34 @@ const Rightcolumn = ({ dictionary }: { dictionary: { intro: string; exprience?: 
             <div className="mb-2 mt-2">
             <div className="flex flex-col">
                 <div className="relative">
-                    {
-                        dictionary.exprience && dictionary.exprience.map((b, index) => (
+                {
+                    dictionary.exprience && dictionary.exprience
+                        .sort((a, b) => b.id - a.id)
+                        .map((b, index) => (
                             <div key={index}>
-                            <div className="absolute top-5 w-1 h-full bg-current left-1 transform -translate-x-1/1"></div>
-                            <div className="flex flex-col space-y-5 mb-5">
-                                <div className="items-center">
-                                    <div className="w-3 h-3 relative top-5 rounded-full bg-current"></div>
-                                    <div className="ml-10">
-                                        <p className="text-2xl font-bold mb-2">{b.title}</p>
-                                        <p className="text-base font-bold mb-2">{b.company}</p>
-                                        <p className="text-sm mb-2">{b.address_work}</p>
-                                        <p className="text-sm mb-2"> {b.date_work.join(' - ')}</p>
-                                        <ul className="list-disc ml-5">
-                                            {Array.isArray(b.jobdesc) && b.jobdesc.map((desc: string, descIndex: number) => (
-                                                <li key={descIndex} className="text-sm mb-2">
-                                                    {descIndex === b.jobdesc.length - 1 ? `${desc}.` : desc}
-                                                </li>
-                                            ))}
-                                        </ul>
+                                <div className="absolute top-5 w-1 h-full bg-current left-1 transform -translate-x-1/1"></div>
+                                <div className="flex flex-col space-y-5 mb-5">
+                                    <div className="items-center">
+                                        <div className="w-3 h-3 relative top-5 rounded-full bg-current"></div>
+                                        <div className="ml-10">
+                                            <p className="text-2xl font-bold mb-2">{b.title}</p>
+                                            <p className="text-base font-bold mb-2">{b.company}</p>
+                                            <p className="text-sm mb-2">{b.address_work}</p>
+                                            <p className="text-sm mb-2">{b.date_work.join(' - ')}</p>
+                                            <ul className="list-disc ml-5">
+                                                {Array.isArray(b.jobdesc) && b.jobdesc.map((desc: string, descIndex: number) => (
+                                                    <li key={descIndex} className="text-sm mb-2">
+                                                        {descIndex === b.jobdesc.length - 1 ? `${desc}.` : desc}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="absolute top-5 w-1 h-full bg-current left-1 transform -translate-x-1/1"></div>
+                                <div className="absolute top-5 w-1 h-full bg-current left-1 transform -translate-x-1/1"></div>
                             </div>
                         ))
-                    }
+                }
 
                 </div>
             </div>

@@ -3,6 +3,7 @@
     "address": "Kabupaten Bekasi, Jawa Barat",
     "exprience":[
         {
+            "id": 1,
             "title": "Web Developer",
             "company": "PT Trasmediacom",
             "address_work": "Cakung, Jakarta Timur",
@@ -20,6 +21,7 @@
             ]
         },
         {
+            "id": 2,
             "title": "IT Developer",
             "company": "PT Smartfren Tbk",
             "address_work": "BSD, Tangerang Banten",
@@ -39,6 +41,7 @@
             ]
         },
         {
+            "id": 3,
             "title": "Fullstack Developer",
             "company": "Folie A Trois Solution (Remote)",
             "address_work": "Kuala Lumpur, Malaysia",
@@ -58,6 +61,7 @@
             ]
         },
         {
+            "id": 4,
             "title": "Web Developer",
             "company": "PT Alat Bantu Dengar Indonesia",
             "address_work": "Salemba, Jakarta Pusat",
