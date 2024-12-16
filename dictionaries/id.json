@@ -66,12 +66,12 @@
             "company": "PT Alat Bantu Dengar Indonesia",
             "address_work": "Salemba, Jakarta Pusat",
             "jobdesc": [
-                "Building a Web Based Procurement System: Developed an effective web based procurement application using Laravel for the backend, ensuring efficient and secure data management.",
-                "Developed Responsive CRM: Designed and implemented an intuitive Customer Relationship Management (CRM) system with Vue.js and React.js, providing an exceptional user experience.",
-                "Strong API Integration: Built APIs with Node.js and Laravel to support interaction between systems, enabling seamless and fast data exchange.",
-                "Engaging User Interface: Used Tailwind, Bootstrap, and PrimeVue to create a responsive and aesthetic user interface, increasing user satisfaction.",
-                "Real-Time Communication Implementation: Integrated Socket.io for real-time communication between users, improving collaboration and responsiveness in applications.",
-                "Use of Firebase: Leveraged Firebase for real-time user authentication and data storage, ensuring application reliability and security.",
+                "Membangun Sistem Pengadaan Berbasis Web: Mengembangkan aplikasi pengadaan berbasis web yang efektif menggunakan Laravel untuk backend, memastikan pengelolaan data yang efisien dan aman.",
+                "Mengembangkan CRM Responsif: Merancang dan mengimplementasikan sistem Manajemen Hubungan Pelanggan (CRM) yang intuitif dengan Vue.js dan React.js, memberikan pengalaman pengguna yang luar biasa.",
+                "Integrasi API yang Kuat: Membangun API dengan Node.js dan Laravel untuk mendukung interaksi antar sistem, memungkinkan pertukaran data yang mulus dan cepat.",
+                "Antarmuka Pengguna yang Menarik: Menggunakan Tailwind, Bootstrap, dan PrimeVue untuk menciptakan antarmuka pengguna yang responsif dan estetis, meningkatkan kepuasan pengguna.",
+                "Implementasi Real-Time Communication: Mengintegrasikan Socket.io untuk komunikasi real-time antara pengguna, meningkatkan kolaborasi dan responsivitas dalam aplikasi.",
+                "Penggunaan Firebase: Memanfaatkan Firebase untuk otentikasi pengguna dan penyimpanan data secara real-time, memastikan keandalan dan keamanan aplikasi.",
                 "Backend Development: Laravel, Nodejs.",
                 "Frontend Development: Vuejs, Reactjs.",
                 "UI/UX Design: Tailwind, Bootstrap, PrimeVue.",
@@ -79,8 +79,8 @@
                 "Database & Storage: Firebase & Mysql."
             ],
             "date_work": [
-                "02 Desember 2020",
-                "24 Juli 2024"
+                "02 December 2020",
+                "24 July 2024"
             ]
         }
     ]
